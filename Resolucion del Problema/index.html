@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- estilo de bootswatch-->
+  
+    <link rel="stylesheet" href="./css/estilo/estilo.css">
+    <title>Verduritas Frescas</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+        <h3 style="color: white; height: 5px;">Verduritas Fresca S.A</h3>
+    </nav>
+
+    <div class="text-center">
+        <img style="width: 300px; height: 300px;" src="./img/logo.png"/>
+    </div>
+
+    <div class="d-flex flex-column align-items-center">
+        <div class="card border-dark mb-3" style="max-width: 25rem; width: 25rem;">
+            <div class="card-header">REGISTRAR COMPRAS</div>
+            <div class="card-body">
+              <label class="card-text">Tipo de Identificacíon</label>
+              <div class="d-flex flex-row  justify-content-around">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="cedulas" id="optionsCedF" value="fisica" checked >
+                      Fisica
+                    </label>
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="cedulas" id="optionscedJ" value="juridica">
+                      Juridica
+                    </label>
+              </div>
+              <input id="cedula" class="form-control form-control-sm" type="text" placeholder="Numero de Cedula" style="margin-top: 25px;">
+              <button id="btnIngresar" style="margin-top: 25px; padding: 2px; font-size: 18px;" type="button" class="btn btn-primary  btn-block">Ingresar</button>
+            </div>
+          </div>
+
+
+          <div style="display: none;"  id="Alerta" class="alert alert-dismissible alert-danger" >
+            <button id="btnclose" type="button" class="close" >&times;</button>
+            <strong>Oh Error!</strong> <span id="mensaje" class="alert-link"></span>
+          </div>
+    </div>
+
+    <script  type="module" src="./js/index.js"></script>
+  </body>
+</html>

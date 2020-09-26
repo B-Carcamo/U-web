@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilo/estilo.css" />
+    <title>Productos</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <h3 style="color: white; height: 5px">Productos Disponibles</h3>
+      <button onclick="Salir()" style="font-size: 14px; padding: 6px;" type="button" class="btn btn-warning">Salir</button>  
+    </nav>
+
+    <div class="d-flex flex-row justify-content-around">
+      
+      
+        <div style="width: 100%; margin-left: 20px;">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Lista de Productos</h5>
+              <div style="display:none;" id="Alerta" class="alert alert-danger m-0 p-2" role="alert">
+              </div>
+            </div>
+            <div class="modal-body">
+                <table id="listProd" class="table table-sm ">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Costo Unitario</th>
+                        <th scope="col">Inventario</th>
+                        <th scope="col">Fecha de Expiracion</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Comprar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div style="width: 100%;  margin: 0px 30px 0px 30px;">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Facturar</h5>
+                  <div style="display:none;" id="Alerta2" class="alert  alert-success m-0 p-2" role="alert">
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <table id="listPedido" class="table table-sm ">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">Descuento</th>
+                        <th scope="col">Total 13 IVA</th>
+                      </tr>
+                    </thead>
+                    <tbody>   
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button onclick="enviarPedido()" style="font-size: 14px; padding: 6px;" type="button" class="btn btn-primary">Enviar Pedido</button>  
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <script   type="module" src="../js/productos.js"></script>
+  </body>
+</html>
